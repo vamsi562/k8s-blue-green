@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: green-deployment
+  labels:
+    purpose: roboshop
+    environment: dev
+    colour: green
+  # namespace: roboshop
+spec:
+  # Specify replicas to be created
+  replicas: 4
+  selector:
+    matchLabels:
+      purpose: roboshop
+      environment: dev
+      colour: green
+  template:
+    # pod definition
+    metadata:
+      labels:
+        purpose: roboshop
+        environment: dev
+        colour: green
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:alpine
