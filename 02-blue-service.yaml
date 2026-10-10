@@ -7,7 +7,7 @@ spec:
   selector:
     purpose: roboshop
     environment: dev
-    colour: blue
+    colour: green
   ports:
     - protocol: TCP
       port: 80 #servicePort
